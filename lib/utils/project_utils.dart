@@ -15,6 +15,7 @@ class ProjectUtils {
     "assets/projects/stories.webp",
     "assets/projects/almotaheda.png",
     "assets/projects/helpers.webp",
+    "assets/projects/logo_gold.png",
   ];
 
   static const List<String> icons = [
@@ -33,6 +34,7 @@ class ProjectUtils {
     "assets/projects/stories.webp",
     "assets/projects/almotaheda.png",
     "assets/projects/helpers.webp",
+    "assets/projects/logo_gold.png",
   ];
 
   static const List<String> titles = [
@@ -51,6 +53,7 @@ class ProjectUtils {
     "ستوريات 2022",
     "ALMOTAHDA GROUP",
     "Helpers",
+    "Omni Lab",
   ];
 
   static const List<String> description = [
@@ -69,15 +72,16 @@ class ProjectUtils {
     "Download All Whatsapp Stories From One App",
     "Website For Almotaheda Group To Show There All Projects",
     "For Asking And Answers Videos And Normal Questions",
+    "Omni labs is an application to help dentists to order dental lab services in easier and faster way , same time to follow the progress of their orders step by step"
   ];
 
-  static const List<String> links = [
+  static const List<String?> googlePlayLinks = [
     "https://play.google.com/store/apps/details?id=com.quran_and_azkar.quran_and_azkar_app",
-    "https://apps.apple.com/eg/app/%D8%A8%D9%86%D9%83-%D8%A7%D9%84%D8%AF%D9%85/id1547670843?l=ar",
-    "https://apps.apple.com/us/app/tejara/id1540453728",
-    "https://apps.apple.com/eg/app/%D9%85%D8%AA%D8%AC%D8%B1-%D9%88%D8%B1%D8%AF%D9%8A-wardi-store/id1560876131?l=ar",
-    "https://apps.apple.com/us/app/afaky-app/id1622146478",
-    "https://apps.apple.com/us/app/gala-order/id1640057386",
+    "https://play.google.com/store/apps/details?id=com.bankeldam.egypt",
+    "https://play.google.com/store/apps/details?id=com.tejaraqa.tejara",
+    null,
+    "https://play.google.com/store/apps/details?id=com.afakyerp.afaky",
+    "https://play.google.com/store/apps/details?id=com.user.gala",
     "https://play.google.com/store/apps/details?id=com.gala.gala_rider",
     "https://play.google.com/store/apps/details?id=com.mohamednagdy.qrscannerandreader",
     "https://play.google.com/store/apps/details?id=com.u3allemny.allemny",
@@ -85,7 +89,46 @@ class ProjectUtils {
     "https://play.google.com/store/apps/details?id=com.ejar.electronic_contracts",
     "https://play.google.com/store/apps/details?id=com.rainmaker.goods_change",
     "https://play.google.com/store/apps/details?id=com.storiesstore.store",
-    "https://almotahdagroup.com/",
+    null,
     "https://apps.apple.com/us/app/helpers/id6444851510",
+    "https://play.google.com/store/apps/details?id=com.omnilabs.omni_labs"
+  ];
+
+  static const List<String?> appStoreLinks = [
+    null,
+    "https://apps.apple.com/eg/app/%D8%A8%D9%86%D9%83-%D8%A7%D9%84%D8%AF%D9%85/id1547670843?l=ar",
+    "https://apps.apple.com/us/app/tejara/id1540453728",
+    "https://apps.apple.com/eg/app/%D9%85%D8%AA%D8%AC%D8%B1-%D9%88%D8%B1%D8%AF%D9%8A-wardi-store/id1560876131?l=ar",
+    "https://apps.apple.com/us/app/afaky-app/id1622146478",
+    "https://apps.apple.com/us/app/gala-order/id1640057386",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    "https://apps.apple.com/us/app/helpers/id6444851510",
+    "https://apps.apple.com/app/omni-lab/id1671362785",
+  ];
+
+  static const List<String?> webLinks = [
+    null,
+    null,
+    null,
+    null,
+    "http://com.afakyerp.com/",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    "https://almotahdagroup.com/",
+    null,
+    "http://omnilabs-dental.com:35000/"
   ];
 }

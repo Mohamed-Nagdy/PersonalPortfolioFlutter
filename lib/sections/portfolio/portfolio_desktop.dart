@@ -37,7 +37,9 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
                   (e) => ProjectCard(
                     banner: e.value,
                     projectIcon: ProjectUtils.icons[e.key],
-                    projectLink: ProjectUtils.links[e.key],
+                    googlePlayLink: ProjectUtils.googlePlayLinks[e.key],
+                    appStoreLink: ProjectUtils.appStoreLinks[e.key],
+                    webLink: ProjectUtils.webLinks[e.key],
                     projectTitle: ProjectUtils.titles[e.key],
                     projectDescription: ProjectUtils.description[e.key],
                   ),

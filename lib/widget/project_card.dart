@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/provider/app_provider.dart';
+import 'package:folio/responsive/responsive.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class ProjectCard extends StatefulWidget {
   final String? banner;
-  final String? projectLink;
+  final String? googlePlayLink;
+  final String? appStoreLink;
+  final String? webLink;
   final String? projectIcon;
   final String projectTitle;
   final String projectDescription;
@@ -17,7 +22,9 @@ class ProjectCard extends StatefulWidget {
     Key? key,
     this.banner,
     this.projectIcon,
-    this.projectLink,
+    this.googlePlayLink,
+    this.appStoreLink,
+    this.webLink,
     this.projectIconData,
     required this.projectTitle,
     required this.projectDescription,
@@ -40,11 +47,58 @@ class ProjectCardState extends State<ProjectCard> {
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
-      onTap: widget.projectLink == null
-          ? () {}
-          : () => openURL(
-                widget.projectLink!,
+      onTap: () {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return Center(
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                width: Responsive.isDesktop(context)
+                    ? width * 0.2
+                    : Responsive.isTablet(context)
+                        ? width * 0.3
+                        : width * 0.4,
+                height: height * 0.2,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: Colors.white,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    if (widget.googlePlayLink != null)
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          launchUrlString(widget.googlePlayLink!);
+                        },
+                        icon: const Icon(FontAwesomeIcons.googlePlay),
+                        label: const Text('Google Play'),
+                      ),
+                    if (widget.appStoreLink != null)
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          launchUrlString(widget.appStoreLink!);
+                        },
+                        icon: const Icon(FontAwesomeIcons.appStoreIos),
+                        label: const Text('App Store'),
+                      ),
+                    if (widget.webLink != null)
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          launchUrlString(widget.webLink!);
+                        },
+                        icon: const Icon(FontAwesomeIcons.globe),
+                        label: const Text('Web'),
+                      ),
+                  ],
+                ),
               ),
+            );
+          },
+        );
+      },
       onHover: (isHovering) {
         if (isHovering) {
           setState(() {
